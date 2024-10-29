@@ -11,12 +11,25 @@ const LofiStation: React.FC = () => {
     const [midiParts, setMidiParts] = useState<any[]>([]);
     const NUM_CHANNELS = 16;
 
-    const instrumentos: { [key: string]: string } = {
-        Piano: 'sine',
-        Guitarra: 'triangle',
-        Bajo: 'square',
-        Sintetizador: 'sawtooth',
-    };
+
+
+    // const instruments: { [key: string]: string } = {
+    //     Piano: 'sine',
+    //     Guitarra: 'triangle',
+    //     Bajo: 'square',
+    //     Sintetizador: 'sawtooth',
+    // };
+
+    useEffect(() => {
+        if (midiParts.length > 0) {
+            // Hacer algo con midiParts
+            midiParts.forEach(part => {
+                part.start();
+            });
+        }
+    }, [midiParts]);
+
+
 
     useEffect(() => {
         const synthArray = Array.from({ length: NUM_CHANNELS }, () =>
