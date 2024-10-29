@@ -4,15 +4,10 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   plugins: [react()],
+  base: '/', // Ensure this points to the root
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  build: {
-    outDir: 'dist', // asegúrate de que esté configurado correctamente
-  },
-  server: {
-    open: true,
-  }
 });
