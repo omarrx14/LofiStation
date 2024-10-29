@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "start": "npm install -g serve && serve -s dist",
     "lint": "eslint .",
-    "preview": "vite preview --port 3000"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@chakra-ui/react": "^3.0.1",
