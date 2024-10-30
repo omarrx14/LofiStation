@@ -5,7 +5,7 @@ const App: React.FC = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/lofistation2" element={<RetroMIDIReaderPlayer />} />
+        <Route path="/" element={<RetroMIDIReaderPlayer />} />
         {/* Otras rutas */}
       </Routes>
     </Router>
